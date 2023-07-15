@@ -1,25 +1,19 @@
-*{
-padding: 0px;
-margin: 0px;
-box-sizing: border-box;
-
-
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-body
-{
-  background-color: #e9ecef !important;
+body {
+  background-color: #eee !important;
 }
 /************/
 /* carousal */
 /************/
-.slide
-{
+.slide {
   margin-top: 0.4rem;
- 
 }
-.heading
-{
+.heading {
   width: 100%;
   height: 5rem;
   /* background-color: black; */
@@ -34,14 +28,49 @@ body
 /*********************/
 /* Featured Products */
 /*********************/
-.featured-products
-{
- display: flex;
- justify-content: space-around;
+.featured-products {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* footer */
-footer
-{
+footer {
+}
+/* ***** */
+/* LOGIN */
+/* ***** */
+
+.login {
   
+}
+
+.sample-img {
+  max-width: 50%;
+  opacity: 0.7;
+}
+
+.login
+{
+  background-color: white !important;
+  
+}
+
+.login-img {
+  /* margin-left: 10rem; */
+  max-width: 20rem;
+  max-height: 40rem;
+  padding-top: 10rem;
+
+  /* box-shadow: 0px 0px 15px 5px rgb(185, 174, 174); */
+}
+/* ****** */
+/* SIGN UP */
+/* ****** */
+
+.img-signup
+{
+  margin-left: 5rem;
+  max-width: 250rem;
+  max-height: 30rem;
+  box-shadow: 5px 10px 10px 5px rgb(185, 174, 174);
 }
