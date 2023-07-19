@@ -21,16 +21,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  /* margin-bottom: rem; */
+  
+}
+.heading-text
+{
+  
+  letter-spacing: 1px;
 }
 
 /*********************/
 /* Featured Products */
 /*********************/
-.featured-products {
+
+.card-flex
+{
   display: flex;
-  justify-content: space-around;
+  flex: 1;
 }
 
 /* footer */
