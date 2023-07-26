@@ -65,6 +65,24 @@ if (isset($_POST['submit'])) {
 
 
 <main>
+<?php
+if (isset($_POST['submit'])) {
+  $credentialsMatch = false;
+
+  foreach ($signup as $input) {
+    if ($email == $input['email'] && $password == $input['password']) {
+      $credentialsMatch = true;
+      break; // Exit the loop early if credentials match
+    }
+  }
+
+  if (!$credentialsMatch) {
+    echo '<div class="alert alert-warning" role="alert">
+            Invalid Credentials
+          </div>';
+  }
+}
+?>
   <section class="login" style="background-color: #eee;">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -108,7 +126,7 @@ if (isset($_POST['submit'])) {
             <!-- Email input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form3Example3">Email address</label>
-              <input type="email" id="form3Example3" name="email" class="form-control form-control-lg <?php echo $email ? 'is-valid' : 'is-invalid'; ?>" placeholder="<?php echo $email ? $email : 'Please Enter valid Email Address'; ?>" />
+              <input type="email" id="validationDefault01 form3Example3" name="email" class="form-control form-control-lg" placeholder="<?php echo $email ? $email : 'Please Enter valid Email Address'; ?>" required>
 
             </div>
 
@@ -116,7 +134,7 @@ if (isset($_POST['submit'])) {
             <!-- Password input -->
             <div class="form-outline mb-3">
               <label class="form-label" for="form3Example4">Password</label>
-              <input type="password" id="form3Example4" name="password" class="form-control form-control-lg <?php echo $password ? 'is-valid' : 'is-invalid'; ?>" placeholder="Enter password" />
+              <input type="password" id="validationDefault01 form3Example3" name="password" class="form-control form-control-lg" placeholder="Enter password" required>
 
             </div>
 

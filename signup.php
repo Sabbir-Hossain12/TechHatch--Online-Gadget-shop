@@ -73,8 +73,27 @@ if (isset($_POST['submit'])) {
 <body>
   
 
+<main>
+<?php
+if (isset($_POST['submit'])) {
+  $credentialsMatch = false;
 
-  <section class="vh-100">
+   {
+    if ($password == $repassword)  {
+      $credentialsMatch = true;
+      
+    }
+  }
+
+  if (!$credentialsMatch) {
+    echo '<div class="alert alert-warning" role="alert">
+            Password and Repeat password must match!
+          </div>';
+  }
+}
+?>
+  <section class="vh-100 sign-up">
+
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-12 col-xl-11">
@@ -91,7 +110,7 @@ if (isset($_POST['submit'])) {
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Your Name</label>
-                        <input type="text" id="form3Example1c validationServer01" name="name" class="form-control <?php echo $name ? 'is-valid' : 'is-invalid'; ?>" />
+                        <input type="text" id="form3Example1c validationServer01" name="name" class="form-control" required>
 
                         <div id="validationServerUsernameFeedback" class=" <?php echo $name ? 'valid-feedback' : 'invalid-feedback'; ?>">
                           <?php echo $name ? 'Looks good!' : 'Please choose a username.'; ?>
@@ -103,7 +122,8 @@ if (isset($_POST['submit'])) {
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example3c">Your Email</label>
-                        <input type="email" id="form3Example3c" name="email" class="form-control <?php echo $email ? 'is-valid' : 'is-invalid'; ?>" />
+                        <input type="email" id="form3Example3c" name="email" class="form-control " required>
+                        
                         <div id="validationServerUsernameFeedback" class=" <?php echo $email ? 'valid-feedback' : 'invalid-feedback'; ?>">
                           <?php echo $email ? 'Looks good!' : 'Please choose a Email.'; ?>
                         </div>
@@ -114,7 +134,7 @@ if (isset($_POST['submit'])) {
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example4c">Password</label>
-                        <input type="password" id="form3Example4c" name="password" class="form-control <?php echo $password && ($password == $repassword) ? 'is-valid' : 'is-invalid'; ?>" />
+                        <input type="password" id="form3Example4c" name="password" class="form-control" required/>
                         <div id="validationServerUsernameFeedback" class=" <?php echo $password && ($password == $repassword) ? 'valid-feedback' : 'invalid-feedback'; ?>">
                           <?php echo ($password && ($password == $repassword)) ? 'Looks good!' : 'Invalid Password '; ?>
                         </div>
@@ -125,7 +145,7 @@ if (isset($_POST['submit'])) {
                       <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                        <input type="password" id="form3Example4cd" name="repassword" class="form-control <?php echo $repassword && ($password == $repassword) ? 'is-valid' : 'is-invalid'; ?>" />
+                        <input type="password" id="form3Example4cd" name="repassword" class="form-control " required/>
                         <div id="validationServerUsernameFeedback" class=" <?php echo $repassword && ($password == $repassword) ? 'valid-feedback' : 'invalid-feedback'; ?>">
                           <?php echo $repassword && ($password == $repassword) ? 'Looks good!' : 'Invalid Password '; ?>
                         </div>
@@ -133,7 +153,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="form-check d-flex justify-content-center mb-5">
-                      <input class="form-check-input me-2 <?php echo $check ? 'is-valid' : 'is-invalid'; ?> " type="checkbox" value="check" name="check" id="form2Example3c" />
+                      <input class="form-check-input me-2" type="checkbox" value="check" name="check" id="form2Example3c" />
                       <label class="form-check-label" for="form2Example3">
                         I agree all statements in <a href="#!">Terms of service</a>
                       </label>
@@ -160,6 +180,7 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
   </section>
+</main>
 
   <?php include "include/footer.php" ?>
 

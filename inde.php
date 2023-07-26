@@ -1,3 +1,4 @@
+
 <?php include "include/header.php" ?>
 
 <?php
@@ -78,7 +79,7 @@
     <section style="background-color: #eee;">
       <div class="container py-5">
         <div class="row">
-          <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+          <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 card-flex">
             <div class="card">
               <div class="d-flex justify-content-between p-3">
                 <p class="lead mb-0">Today's Combo Offer</p>
@@ -86,7 +87,7 @@
                   <p class="text-white mb-0 small">x4</p>
                 </div>
               </div>
-              <img src="image/product/hp.jpg" class="card-img-top" alt="Laptop" />
+              <img src="image/product/airpods pro.jpg" class="card-img-top" alt="Laptop" />
               <div class="card-body">
                 <div class="d-flex justify-content-between">
                   <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
@@ -111,7 +112,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+          <div class="col-md-6 col-lg-4 mb-4 mb-md-0 card-flex">
             <div class="card">
               <div class="d-flex justify-content-between p-3">
                 <p class="lead mb-0">Today's Combo Offer</p>
@@ -193,7 +194,7 @@
           <div class="col-lg-4 col-md-12 mb-4">
             <div class="card">
               <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
-                <img src="https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1" class="w-100" />
+                <img src="https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1" class="w-100 .hover-zoom" />
                 <a href="#!">
                   <div class="mask">
                     <div class="d-flex justify-content-start align-items-end h-100">
