@@ -1,4 +1,3 @@
-<?php include "include/bootstrap.php" ?>
 <?php include "include/header.php" ?>
 
 <?php
@@ -65,24 +64,24 @@ if (isset($_POST['submit'])) {
 
 
 <main>
-<?php
-if (isset($_POST['submit'])) {
-  $credentialsMatch = false;
+  <?php
+  if (isset($_POST['submit'])) {
+    $credentialsMatch = false;
 
-  foreach ($signup as $input) {
-    if ($email == $input['email'] && $password == $input['password']) {
-      $credentialsMatch = true;
-      break; // Exit the loop early if credentials match
+    foreach ($signup as $input) {
+      if ($email == $input['email'] && $password == $input['password']) {
+        $credentialsMatch = true;
+        break; // Exit the loop early if credentials match
+      }
     }
-  }
 
-  if (!$credentialsMatch) {
-    echo '<div class="alert alert-warning" role="alert">
+    if (!$credentialsMatch) {
+      echo '<div class="alert alert-warning" role="alert">
             Invalid Credentials
           </div>';
+    }
   }
-}
-?>
+  ?>
   <section class="login" style="background-color: #eee;">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -178,6 +177,7 @@ if (isset($_POST['submit'])) {
 
 
 
-
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <?php include "include/footer.php" ?>
